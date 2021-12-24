@@ -3439,5 +3439,5 @@ input::placeholder {
 
 .panel > .table:last-child, .panel > .table-responsive:last-child > .table:last-child {
     border-radius: 10px;
-    box-shadow: 0 2px 4px #8a8d90;
+    box-shadow: 0 3px 4px #8a8d90;
 }
