@@ -403,6 +403,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>HasSymptom</span>
 								<select name="HasSymptom" id="HasSymptom" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="hassymptom" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="hassymptom" class="vaccine-registration-vaccination-sl-opt" >No</option>
 									<option value="hassymptom" class="vaccine-registration-vaccination-sl-opt" >Unknown</option>
@@ -411,6 +412,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>ContactSymptom</span>
 								<select name="ContactSymptom" id="ContactSymptom" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="contactsymptom" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="contactsymptom" class="vaccine-registration-vaccination-sl-opt" >No</option>
 									<option value="contactsymptom" class="vaccine-registration-vaccination-sl-opt" >Unknown</option>
@@ -419,6 +421,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>ContactForeigner</span>
 								<select name="ContactForeigner" id="ContactForeigner" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="contactforeigner" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="contactforeigner" class="vaccine-registration-vaccination-sl-opt" >No</option>
 									<option value="contactforeigner" class="vaccine-registration-vaccination-sl-opt" >Unknown</option>
@@ -427,6 +430,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>ContactCovidPerson</span>
 								<select name="ContactCovidPerson" id="ContactCovidPerson" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="contactcovidperson" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="contactcovidperson" class="vaccine-registration-vaccination-sl-opt" >No</option>
 									<option value="contactcovidperson" class="vaccine-registration-vaccination-sl-opt" >Unknown</option>
@@ -435,6 +439,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>FromCovidPlace</span>
 								<select name="FromCovidPlace" id="ContactForeigner" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="fromcovidplace" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="fromcovidplace" class="vaccine-registration-vaccination-sl-opt" >No</option>
 									<option value="fromcovidplace" class="vaccine-registration-vaccination-sl-opt" >Unknown</option>
@@ -448,13 +453,13 @@
 								</div>
 							</div>
 							<div class="fh5co-body-create-row">
-								<span>CitizenID</span>
-								<select name="Citizen" id="Citizen" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023264</option>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023254</option>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023244</option>
-								</select>
-							</div>
+								<span>Citizen</span>
+								<form autocomplete="off" action="/action_page.php">
+									<div class="autocomplete">
+										<input id="Citizen" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" type="text" name="Citizen" placeholder="Enter value">
+									</div>
+								</form>
+							</div>							
 						</div>
 					</div>
 					

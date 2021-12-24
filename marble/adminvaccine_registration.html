@@ -379,12 +379,12 @@
 						</div>
 						<div class="fh5co-body-create-vaccine" data-animate-effect="fadeInLeft">
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
-								<span>CitizenID</span>
-								<select name="Citizen" id="Citizen" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023264</option>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023254</option>
-									<option value="citizen" class="vaccine-registration-vaccination-sl-opt" >079201023244</option>
-								</select>
+								<span>Citizen</span>
+								<form autocomplete="off" action="/action_page.php">
+									<div class="autocomplete">
+										<input id="Citizen" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" type="text" name="Citizen" placeholder="Enter value">
+									</div>
+								</form>
 							</div>
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>AnamnessisID</span>
@@ -395,6 +395,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>Agreement</span>
 								<select name="Agreement" id="Agreement" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="agreement" class="vaccine-registration-vaccination-sl-opt" >Yes</option>
 									<option value="agreement" class="vaccine-registration-vaccination-sl-opt" >No</option>
 								</select>
@@ -402,6 +403,7 @@
 							<div class="fh5co-body-create-row" data-animate-effect="fadeInLeft">
 								<span>ChoiceInjections</span>
 								<select name="ChoiceInjections" id="ChoiceInjections" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="choiceinjections" class="vaccine-registration-vaccination-sl-opt" >1</option>
 									<option value="choiceinjections" class="vaccine-registration-vaccination-sl-opt" >2</option>
 									<option value="choiceinjections" class="vaccine-registration-vaccination-sl-opt" >3</option>
@@ -418,6 +420,7 @@
 							<div class="fh5co-body-create-row">
 								<span>Status</span>
 								<select name="Agreement" id="Agreement" class="fh5co-body-edit-item-select vaccine-registration-vaccination-sl" required>
+									<option value="" selected disabled hidden>Choose here</option>
 									<option value="agreement" class="vaccine-registration-vaccination-sl-opt" >Done</option>
 									<option value="agreement" class="vaccine-registration-vaccination-sl-opt" >Wait</option>
 								</select>

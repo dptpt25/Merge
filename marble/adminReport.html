@@ -1,3 +1,5 @@
+admin report
+
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -14,7 +16,10 @@
 	<meta name="author" content="FreeHTML5.co" />
 	
 	<script src="https://kit.fontawesome.com/15bc00968f.js" crossorigin="anonymous"></script>	
-
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="./js/filter.js"></script>
   	<!-- 
 	//////////////////////////////////////////////////////
 
@@ -68,8 +73,7 @@
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-			
-		<nav id="fh5co-main-menu" role="navigation">
+			<nav id="fh5co-main-menu" role="navigation">
 				<div class="head-nav">
 					<h4 class="head-nav-altteam"> ALT TEAM </h4>
 					<hr class="head-nav-hr">
@@ -79,14 +83,29 @@
 					<p class="head-nav-email">dpthao251@gmail.com</p>
 				</div>
 				<div class="fh5co-main-menu-nav">NAVIGATION</div>
-				<ul>
-					<li class="fh5co-active"><a href="./adminHome.html">Home</a></li>
-					<li><a href="#">Notification</a></li>
-					<li><a href="#">Setting</a></li>
-					<li><a href="#">As a client</a></li>
-					<li><a href="#">Logout</a></li>
+				<ul class="fh5co-main-menu-nav-ul">
+						<li class="fh5co-main-menu-nav-item">
+						<i class="fas fa-home"></i>
+						<a href="./adminHome.html" style="text-decoration-line: underline">Home</a>
+						</li>
+						<li class="fh5co-main-menu-nav-item">
+							<i class="fas fa-file-alt"></i>
+							<a class ="vaccine-regis" href="#">Report</a>
+						</li>
+						<li class="fh5co-main-menu-nav-item">
+							<i class="fas fa-cog"></i>
+							<a class="fh5co-main-menu-nav-white" href="#" >Setting</a>
+						</li>
+						<li class="fh5co-main-menu-nav-item">
+							<i class="fas fa-share-square"></i>
+							<a class="fh5co-main-menu-nav-white" href="./home.html" >As a client</a>
+						</li>
+						<li class="login-pls fh5co-main-menu-nav-item">
+							<i class="color-white-pls fas fa-sign-out-alt"></i>
+							<a href="#" class="fh5co-main-menu-logout">Logout</a>
+						</li>
 				</ul>
-			</nav>	
+			</nav>
 
 			<div class="fh5co-footer">
 				<a class="fh5co-footer-help"href="">Need help?</a>
@@ -97,7 +116,7 @@
 			</div>
 		</aside>
 
-		<!-- <div id="fh5co-main">
+		<div id="fh5co-main">
 			<div class="fh5co-narrow-content">
 				<div class="fh5co-header">
 					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Report</h2>
@@ -132,34 +151,131 @@
 			<div>
 				
 			</div>
-			
+		
+<div class="container" >
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">List of registrations for injections</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="FullName" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="City" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="ChoiceInjections" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="DateOfRegistration" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Bến Tre</td>
+                        <td>1</td>
+                        <td>22/12/2021</td>
+                        <td>done</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Bến Tre</td>
+                        <td>1</td>
+                        <td>22/12/2021</td>
+                        <td>done</td>
+                    </tr><tr>
+                        <td>3</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Bến Tre</td>
+                        <td>1</td>
+                        <td>22/12/2021</td>
+                        <td>wait</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+		
 
-
-			
-			<div class="home-pape-features">
-				<div class="home-item-link col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-					<div class="blog-entry">
-						<a href="./vaccineregistration.html" class="work-image-popup-features work image-popup" style="background-color: rgb(152,221,202,75%)">
-							<div class="image-popup-item">
-								<h1>V</h1>
-								<span>Vaccine doses administered by location</span>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="home-item-link col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-					<div class="blog-entry">
-						<a href="./vaccineregistration.html" class="work-image-popup-features work image-popup" style="background-color: rgb(152,221,202,75%)">
-							<div class="image-popup-item">
-								<h1>V</h1>
-								<span>Vaccine doses administered by location</span>
-							</div>
-						</a>
-					</div>
-				</div>
-  
-		</div> -->
+	<div class="container">
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">List of registrations for injections</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="QR Code" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Vaccine Batch" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="City" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="VaccineedDate" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="ChoiceInjections" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="FullName" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Medical Staff" disabled></th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>VCB003</td>
+                        <td>Bến Tre</td>
+                        <td>22/12/2021</td>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Trần Thị B</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>123456782</td>
+                        <td>VCB003</td>
+                        <td>Bến Tre</td>
+                        <td>22/12/2021</td>
+                        <td>1</td>
+                        <td>Nguyễn Văn B</td>
+                        <td>Trần Thị B</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>123456729</td>
+                        <td>VCB003</td>
+                        <td>Bến Tre</td>
+                        <td>22/12/2021</td>
+                        <td>2</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Trần Thị C</td>
+                    </tr><tr>
+                        <td>4</td>
+                        <td>123453789</td>
+                        <td>VCB003</td>
+                        <td>Bến Tre</td>
+                        <td>22/12/2021</td>
+                        <td>3</td>
+                        <td>Nguyễn Văn D</td>
+                        <td>Trần Thị B</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 		</div>
+		
 
 
 
@@ -179,4 +295,3 @@
 	<script src="js/main.js"></script>
 	</body>
 </html>
-
